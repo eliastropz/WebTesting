@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.6 on linux)" generated="20230111 01:03:34.303" rpa="false" schemaversion="3">
+<suite id="s1" name="Amazon Testes" source="/home/elias/project/RobotFramework/WebTesting/amazon_testes.robot">
+<test id="s1-t1" name="Caso de Teste 01 - Acesso ao menu &quot;Eletrônicos&quot;" line="8">
+<kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230111 01:03:34.415" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg timestamp="20230111 01:03:34.417" level="INFO">Firefox driver log is always forced to to: /home/elias/project/RobotFramework/WebTesting/geckodriver-9.log</msg>
+<status status="PASS" starttime="20230111 01:03:34.415" endtime="20230111 01:03:35.938"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230111 01:03:35.938" endtime="20230111 01:03:36.208"/>
+</kw>
+<status status="PASS" starttime="20230111 01:03:34.415" endtime="20230111 01:03:36.208"/>
+</kw>
+<kw name="Acessar a home do site Amazon.com.br" library="amazon_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230111 01:03:36.210" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<status status="PASS" starttime="20230111 01:03:36.209" endtime="20230111 01:03:38.457"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${MENU_ELETRONICO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230111 01:03:38.457" endtime="20230111 01:03:38.499"/>
+</kw>
+<status status="PASS" starttime="20230111 01:03:36.209" endtime="20230111 01:03:38.500"/>
+</kw>
+<kw name="Entrar no menu &quot;Eletrônicos&quot;" library="amazon_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${MENU_ELETRONICO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230111 01:03:38.502" level="INFO">Clicking element '//a[@href='/Eletronicos-e-Tecnologia/b/?ie=UTF8&amp;node=16209062011&amp;ref_=nav_cs_electronics'][contains(.,'Eletrônicos')]'.</msg>
+<status status="PASS" starttime="20230111 01:03:38.501" endtime="20230111 01:03:40.003"/>
+</kw>
+<status status="PASS" starttime="20230111 01:03:38.501" endtime="20230111 01:03:40.003"/>
+</kw>
+<kw name="Verificar se aparece a frase &quot;Eletrônicos e Tecnologia&quot;" library="amazon_resources">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${TEXTO_HEADER_ELETRONICOS}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230111 01:03:40.004" endtime="20230111 01:03:40.069"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${HEADER_ELETRONICOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230111 01:03:40.069" endtime="20230111 01:03:40.146"/>
+</kw>
+<status status="PASS" starttime="20230111 01:03:40.004" endtime="20230111 01:03:40.146"/>
+</kw>
+<kw name="Verificar se o título da página fica &quot;Eletrônicos e Tecnologia | Amazon.com.br&quot;" library="amazon_resources" sourcename="Verificar se o título da página fica &quot;${TITULO}&quot;">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>title=${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230111 01:03:40.150" level="INFO">Page title is 'Eletrônicos e Tecnologia | Amazon.com.br'.</msg>
+<status status="PASS" starttime="20230111 01:03:40.147" endtime="20230111 01:03:40.150"/>
+</kw>
+<status status="PASS" starttime="20230111 01:03:40.147" endtime="20230111 01:03:40.151"/>
+</kw>
+<kw name="Verificar se aparece a categoria &quot;Computadores e Informática&quot;" library="amazon_resources" sourcename="Verificar se aparece a categoria &quot;${NOME_CATEGORIA}&quot;">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//a[@aria-label='${NOME_CATEGORIA}']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230111 01:03:40.211" level="INFO">Element '//a[@aria-label='Computadores e Informática']' is displayed.</msg>
+<status status="PASS" starttime="20230111 01:03:40.151" endtime="20230111 01:03:40.212"/>
+</kw>
+<status status="PASS" starttime="20230111 01:03:40.151" endtime="20230111 01:03:40.212"/>
+</kw>
+<kw name="Verificar se aparece a categoria &quot;Tablets&quot;" library="amazon_resources" sourcename="Verificar se aparece a categoria &quot;${NOME_CATEGORIA}&quot;">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//a[@aria-label='${NOME_CATEGORIA}']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230111 01:03:40.243" level="INFO">Element '//a[@aria-label='Tablets']' is displayed.</msg>
+<status status="PASS" starttime="20230111 01:03:40.213" endtime="20230111 01:03:40.243"/>
+</kw>
+<status status="PASS" starttime="20230111 01:03:40.213" endtime="20230111 01:03:40.243"/>
+</kw>
+<doc>Esse teste verifica o menu eletrônico do site da Amazon.com.br
+e verifica a categoria Computadores e Informática</doc>
+<tag>categorias</tag>
+<tag>menus</tag>
+<status status="PASS" starttime="20230111 01:03:34.414" endtime="20230111 01:03:40.243"/>
+</test>
+<doc>Essa suíte testa o site da Amazon.com.br</doc>
+<status status="PASS" starttime="20230111 01:03:34.306" endtime="20230111 01:03:40.244"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">categorias</stat>
+<stat pass="1" fail="0" skip="0">menus</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Amazon Testes">Amazon Testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
